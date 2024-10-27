@@ -11,13 +11,22 @@
         <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/598038bf-6541-48d0-9ec1-22a54e8870f0/d5wam4v-5b590bd3-44f4-4e63-971d-c6aceb3d1133.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzU5ODAzOGJmLTY1NDEtNDhkMC05ZWMxLTIyYTU0ZTg4NzBmMFwvZDV3YW00di01YjU5MGJkMy00NGY0LTRlNjMtOTcxZC1jNmFjZWIzZDExMzMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.t_WqjuTg_19MNtQ4d7wN9n30uFCVX0XrTrpSAXrSECs" alt="Foca" class="responsive-img">
         <form class="form-container">
             <div class="input-group">
-                <input type="text" id="question1">
+                <input type="text" id="input1">
                 <span>ou</span>
-                <input type="text" id="question2">
+                <input type="text" id="input2">
             </div>
             <div class="button-container">
                 <button onclick="ask()">Perguntar</button>
             </div>
         </form>
+        <script>
+            function ask() {
+                var choice = Math.floor(Math.random() * 10);
+                if (choice%2)
+                    alert("A foca escolheu " + document.getElementById("input1").value);
+                else
+                    alert("A foca escolheu " + document.getElementById("input2").value);
+            }
+        </script>
     </body>
 </html>
